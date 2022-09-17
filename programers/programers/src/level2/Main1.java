@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class Main1 {
 
 	public static void main(String[] args) {
-		Solution sol = new Solution();
+		Solution1 sol = new Solution1();
 		Scanner sc = new Scanner(System.in);
 		
 		String s = sc.nextLine();
@@ -16,7 +16,7 @@ public class Main1 {
 
 }
 
-class Solution {
+class Solution1 {
     public String solution(String s) {
         String answer = "";
         
