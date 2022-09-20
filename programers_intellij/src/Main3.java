@@ -9,11 +9,6 @@ public class Main3 {
         int[] B = {5,4,4};
         System.out.println(sol.solution(A,B));
 
-
-
-
-
-
     }
 }
 class Solution3 {
