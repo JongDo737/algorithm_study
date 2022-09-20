@@ -16,13 +16,11 @@ class Solution {
         int start=0;
         int end=0;
         int min = 10000;
-
+        
         Set<String> strSet = new HashSet<>();
-
         for(int i=0; i<gems.length; i++) {
             strSet.add(gems[i]);
         }
-
         for(int i=0; i<gems.length; i++){       // start
             List<String> strList = new ArrayList<>();
             for(int j=i; j<gems.length; j++){     // end
@@ -49,9 +47,7 @@ class Solution {
                             start = i;
                             end = j;
                         }
-
-                        break;      // 더이상 길어질 필요없음
-
+                        break;      // end 값만 늘어나는건 의미가 없음
                     }
                 }
 
