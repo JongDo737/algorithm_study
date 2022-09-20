@@ -16,7 +16,7 @@ class Solution {
         int start=0;
         int end=0;
         int min = 10000;
-        
+
         Set<String> strSet = new HashSet<>();
         for(int i=0; i<gems.length; i++) {
             strSet.add(gems[i]);
