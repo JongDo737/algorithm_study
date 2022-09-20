@@ -18,7 +18,6 @@ class Solution6 {
             BigInteger temp = left;
             left = right;
             right = right.add(temp);
-            
         }
         right = right.remainder(BigInteger.valueOf(1234567));
         answer= right.intValue();
