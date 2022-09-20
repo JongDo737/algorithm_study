@@ -1,3 +1,4 @@
+import java.util.Locale;
 import java.util.Scanner;
 
 public class Main {
@@ -12,20 +13,11 @@ public class Main {
 class Solution {
     public String solution(String s) {
         String answer = "";
-        String[] arStr = s.split(" ");
-        int max = -100000;
-        int min = 100000;
-
-        for(int i=0; i<arStr.length; i++) {
-            int temp = Integer.parseInt(arStr[i]);
-            if(temp >= max) {
-                max = temp;
-            }
-            if(temp <= min) {
-                min = temp;
-            }
+        String[] arStr = s.toLowerCase().split(" ");
+        for(int i=0; i<arStr.length; i++){
+            
         }
-        answer = min + " " +max;
+
 
 
 
