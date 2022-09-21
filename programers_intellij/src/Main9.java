@@ -13,6 +13,7 @@ public class Main9 {
 class Solution9 {
     public int[] solution(int n, String[] words) {
         int[] answer = new int[2]; //[몇번째 사람이, 몇번째 탈락]
+        
         List<String> gameWords = new ArrayList<>();
         List<String> deleteWords = new ArrayList<>();
 
