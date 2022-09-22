@@ -16,6 +16,7 @@ class Solution11 {
         int answer = 0;
         // 최소와 최대값을 비교하여 limit-min 값보다 큰사람은 보트 1칸씩 차지하게 하고
         Arrays.sort(people);
+        
         int heavyPeopleIndex=people.length;
         int lastPerson = heavyPeopleIndex-1;
         for(int i=0; i<heavyPeopleIndex; i++) {
