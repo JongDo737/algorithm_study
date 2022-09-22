@@ -33,6 +33,7 @@ class Solution11 {
                 answer+=1;
                 lastPerson-=1;
                 i--;
+                
             }
         }
 
