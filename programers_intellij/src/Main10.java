@@ -25,7 +25,6 @@ class Solution10 {
                 stack.push(c);          // 다르면 push
             }
         }
-
         if(stack.size()>0) {
             return 0;
         }else {
