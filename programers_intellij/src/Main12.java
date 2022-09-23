@@ -18,8 +18,8 @@ class Solution12 {
             int num = arr[i];
             int divNum = 2;
             while(num==1) {
-                
-                if(num%divNum)
+
+//                if(num%divNum)
             }
 
 
