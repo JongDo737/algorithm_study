@@ -17,7 +17,9 @@ class Solution13
         //절반보다 클때
         // 작을때
 
-        if()
+        while(true) {
+            
+        }
 
 
 
