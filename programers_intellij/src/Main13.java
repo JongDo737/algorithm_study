@@ -18,12 +18,18 @@ class Solution13
         // 작을때
 
         while(true) {
-            
+            if(b>(n/2) && a<=n/2) {
+                //2의 k승 +1 = answer
+                while(n!=1) {
+                    n/=2;
+                    answer++;
+                }
+                System.out.println(answer);
+                break;
+            }else {
+                n/=2;
+            }
         }
-
-
-
-
         return answer;
     }
 }
