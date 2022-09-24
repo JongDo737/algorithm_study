@@ -9,34 +9,21 @@ public class Main14 {
 class Solution14 {
     public long solution(int n) {
         long answer = 0;
+        // 피보나치 수열을 구하면 된다.
+        // 1 = 1
+        // 2 = 2
+        // 3 = 3
+        // 4 = 5
+        // 5 = 8
 
-        int oneCount = n%2;
-        int twoCount = n/2;
-        //222
-        //1122 4! / 2! *2!
-        //1222
-        System.out.println(oneCount);
-        System.out.println(twoCount);
-        while(twoCount!=-1) {
-            n= twoCount+oneCount;
-            System.out.println("n = "+n);
-            answer += factorial(n) / (factorial(oneCount)*factorial(twoCount));
-            System.out.println("result : "+factorial(n) / (factorial(oneCount)*factorial(twoCount)));
-            System.out.println("answer = "+answer);
-            twoCount-=1;
-            oneCount+=2;
-        }
-
-
-        return answer;
+        return pibo(n);
     }
-    public int factorial(int number){
-        if(number==1){
-            return 1;
-        }else if (number == 0){
-            return 1;
+    public int pibo(int number){
+        if(number <=1) {
+            return number;
+        }else {
+            return pibo(number-1)%1234567+pibo(number-2)%1234567;
         }
 
-        return number*factorial(number-1);
     }
 }
