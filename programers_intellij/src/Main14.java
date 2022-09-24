@@ -8,22 +8,14 @@ public class Main14 {
 }
 class Solution14 {
     public long solution(int n) {
-        long answer = 0;
-        // 피보나치 수열을 구하면 된다.
-        // 1 = 1
-        // 2 = 2
-        // 3 = 3
-        // 4 = 5
-        // 5 = 8
+        long dp[] = new long[2001];
+        dp[1] = 1;
+        dp[2] = 2;
 
-        return pibo(n);
-    }
-    public int pibo(int number){
-        if(number <=1) {
-            return number;
-        }else {
-            return pibo(number-1)%1234567+pibo(number-2)%1234567;
-        }
+        for(int i=3;i<=2000; i++)
+            dp[i] = (dp[i-1] + dp[i-2]) %1234567;
 
+        return dp[n];
     }
+
 }
