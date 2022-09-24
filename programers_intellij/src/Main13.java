@@ -12,22 +12,17 @@ class Solution13
 {
     public int solution(int n, int a, int b)
     {
-        int answer = 0;
+        int answer = 1;
         // 12 34 56 78 99 99 99 99
         //절반보다 클때
         // 작을때
-
         while(true) {
-            if(b>(n/2) && a<=n/2) {
-                //2의 k승 +1 = answer
-                while(n!=1) {
-                    n/=2;
-                    answer++;
-                }
-                System.out.println(answer);
+            a= a/2+ a%2;
+            b= b/2 + b%2;
+            if(a==b) {
                 break;
             }else {
-                n/=2;
+                answer++;
             }
         }
         return answer;
