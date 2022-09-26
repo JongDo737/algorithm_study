@@ -1,4 +1,4 @@
-public class Main14 {
+public class Main15g {
     public static void main(String[] args) {
         Solution14 sol = new Solution14();
         int n = 5;
