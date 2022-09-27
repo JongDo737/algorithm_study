@@ -1,9 +1,10 @@
 
 public class Main16 {
     public static void main(String[] args) {
-        int n = 6;
         Solution16 sol = new Solution16();
-        sol.solution(n);
+        int cacheSize = 3;
+        String[] cities = {"Jeju", "Pangyo", "Seoul", "NewYork", "LA", "Jeju", "Pangyo", "Seoul", "NewYork", "LA"};
+        sol.solution(cacheSize, cities);
     }
 }
 class Solution16 {
