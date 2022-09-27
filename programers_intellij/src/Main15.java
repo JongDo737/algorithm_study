@@ -10,7 +10,6 @@ public class Main15 {
 
         int ans = 0;
         while(n!=1) {
-            System.out.println(n);
             if(n%2!=0) { //홀 수 일때 4만큼 왔다가
                 ans++;
                 n--;
@@ -18,8 +17,6 @@ public class Main15 {
             n/=2;
         }
         ans++;
-        System.out.println(ans);
-
         return ans;
     }
 }
