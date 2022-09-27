@@ -14,7 +14,6 @@ public class Main15 {
             if(n%2!=0) { //홀 수 일때 4만큼 왔다가
                 ans++;
                 n--;
-
             }
             n/=2;
         }
