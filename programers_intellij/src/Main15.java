@@ -1,12 +1,12 @@
 public class Main15g {
     public static void main(String[] args) {
-        Solution14 sol = new Solution14();
+        Solution15 sol = new Solution15();
         int n = 5;
         System.out.println(sol.solution(n));
 
-    }
+    }gi
 }
-class Solution14 {
+class Solution15 {
     public long solution(int n) {
         long dp[] = new long[2001];
         dp[1] = 1;
