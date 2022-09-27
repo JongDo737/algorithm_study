@@ -1,21 +1,26 @@
-public class Main15g {
+
+
+public class Main15 {
     public static void main(String[] args) {
-        Solution15 sol = new Solution15();
-        int n = 5;
-        System.out.println(sol.solution(n));
-
-    }gi
-}
-class Solution15 {
-    public long solution(int n) {
-        long dp[] = new long[2001];
-        dp[1] = 1;
-        dp[2] = 2;
-
-        for(int i=3;i<=2000; i++)
-            dp[i] = (dp[i-1] + dp[i-2]) %1234567;
-
-        return dp[n];
+        int n = 6;
+        Main15 sol = new Main15();
+        sol.solution(n);
     }
+    public int solution(int n) {
 
+        int ans = 0;
+        while(n!=1) {
+            System.out.println(n);
+            if(n%2!=0) { //홀 수 일때 4만큼 왔다가
+                ans++;
+                n--;
+
+            }
+            n/=2;
+        }
+        ans++;
+        System.out.println(ans);
+
+        return ans;
+    }
 }
