@@ -1,3 +1,5 @@
+import java.util.Collection;
+import java.util.Collections;
 
 public class Main16 {
     public static void main(String[] args) {
@@ -10,7 +12,8 @@ public class Main16 {
 class Solution16 {
     public int solution(int cacheSize, String[] cities) {
         int answer = 0;
-        
+        filt
         return answer;
     }
+    static <T> Collection<T> filter
 }
