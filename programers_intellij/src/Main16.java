@@ -12,6 +12,7 @@ public class Main16 {
 class Solution16 {
     public int solution(int cacheSize, String[] cities) {
         int answer = 0;
+        Sacnner sc = new Scanner(System.in);
         return answer;
     }
 }
