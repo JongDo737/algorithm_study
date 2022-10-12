@@ -7,9 +7,7 @@ public class Main16 {
         Solution16 sol = new Solution16();
         int cacheSize = 3;
         String[] cities = {"Jeju", "Pangyo", "Seoul", "NewYork", "LA", "Jeju", "Pangyo", "Seoul", "NewYork", "LA"};
-        int result = sol.solution(cacheSize, cities) -> {
-            return 0;
-        };
+
         sol.solution(cacheSize, cities);
     }
 }
