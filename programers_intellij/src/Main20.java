@@ -50,9 +50,13 @@ public class Main20 {
         // or
         Long sum5 = numbers.stream().count();
 
-        // 대문자 -> 출략
-        List<String> str = Arrays.asList("Modern", "Java", "In","Action");
+        // 대문자 -> 출력
+        List<String> str = Arrays.asList("Modern", "Java", "In", "Action");
         str.stream().map(String::toUpperCase).forEach(System.out::println);
+
+        // 배열로 스트림 만들기
+        int[] numArr = {2, 3, 5, 7, 11, 13};
+        int sum6 = Arrays.stream(numArr).reduce(0, (a, b) -> a + b);
     }
 
 
