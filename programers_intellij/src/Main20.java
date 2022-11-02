@@ -1,7 +1,4 @@
-import java.util.Arrays;
-import java.util.Iterator;
-import java.util.List;
-import java.util.Optional;
+import java.util.*;
 import java.util.stream.Collectors;
 
 public class Main20 {
@@ -59,5 +56,11 @@ public class Main20 {
         int sum6 = Arrays.stream(numArr).reduce(0, (a, b) -> a + b);
     }
 
+    // Collectors 유틸리티 클래스의 toList()
+//    List<Transaction> transactions = transactionStream.collect(Collectors.toList());
 
+    //groupingBy
+//    Map<Dish.Type, List<Dish>> = dishesByType = menu.stream().collect(groupingBy(Dish::getType));
+//    Map<Dish.Type, List<Dish>> = dishesByType = menu.stream()
+//            .collect(groupingBy(Dish::getType, filtering(dish -> getCalories() > 500, toList())));
 }
