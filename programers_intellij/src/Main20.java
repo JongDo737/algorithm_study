@@ -50,7 +50,9 @@ public class Main20 {
         // or
         Long sum5 = numbers.stream().count();
 
-
+        // 대문자 -> 출략
+        List<String> str = Arrays.asList("Modern", "Java", "In","Action");
+        str.stream().map(String::toUpperCase).forEach(System.out::println);
     }
 
 
