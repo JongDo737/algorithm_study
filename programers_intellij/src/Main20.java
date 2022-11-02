@@ -1,5 +1,6 @@
 import java.util.*;
 import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 public class Main20 {
     public static void main(String[] args) {
@@ -63,4 +64,12 @@ public class Main20 {
 //    Map<Dish.Type, List<Dish>> = dishesByType = menu.stream().collect(groupingBy(Dish::getType));
 //    Map<Dish.Type, List<Dish>> = dishesByType = menu.stream()
 //            .collect(groupingBy(Dish::getType, filtering(dish -> getCalories() > 500, toList())));
+
+    // 병렬처리 1~n까지 합
+    public long parallelSum(Long n){
+        return Stream.iterate(1L, i->i+1)
+                .limit(n)
+                .parallel()
+                .reduce(0L, Long::sum);
+    }
 }
