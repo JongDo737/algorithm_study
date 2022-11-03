@@ -31,7 +31,10 @@ public class Main21 {
 
         System.out.println(ageOfFriends2.getOrDefault("jongmin",1));        // jongmin이 없으면 1을 반환
 //        System.out.println(ageOfFriends2.getOrDefault("jongmin","matrix"));
-        ageOfFriends2.remove("jongmin",23);
+        ageOfFriends2.remove("jongmin",24); // 키와 값이 맞으면 삭제
+
+        ageOfFriends2.replaceAll((name, age) -> age+1);
+        ageOfFriends2.replace(key, value);
     }
 
 
