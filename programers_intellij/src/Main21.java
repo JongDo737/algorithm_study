@@ -31,6 +31,7 @@ public class Main21 {
 
         System.out.println(ageOfFriends2.getOrDefault("jongmin",1));        // jongmin이 없으면 1을 반환
 //        System.out.println(ageOfFriends2.getOrDefault("jongmin","matrix"));
+        ageOfFriends2.remove("jongmin",23);
     }
 
 
