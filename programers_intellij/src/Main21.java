@@ -13,13 +13,21 @@ public class Main21 {
                                                             Map.entry("jaydee",21),
                                                             Map.entry("hihhihihi",26));
 
-        for(Iterator<Transaction> iterator = transactions.iterator(); iterator.hasNext();) {
-            Transaction transaction = iterator.next();
-            if(Character.isDigit(transaction.getReferenceCode().charAt(0))){
-                iterator.remove();
-            }
-        }
+//        for(Iterator<Transaction> iterator = transactions.iterator(); iterator.hasNext();) {
+//            Transaction transaction = iterator.next();
+//            if(Character.isDigit(transaction.getReferenceCode().charAt(0))){
+//                iterator.remove();
+//            }
+//        }
 
+        for(Map.Entry<String,Integer> entry : ageOfFriends2.entrySet()){
+            String friend = entry.getKey();
+            Integer age = entry.getValue();
+            System.out.println(friend+" is "+age+" years old");
+        }
+        ageOfFriends2.forEach((friend, age) -> System.out.println(friend+" is "+age+" years old"));
+
+        ageOfFriends2.entrySet().stream().sorted(Map.Entry.comparingByKey()).forEachOrdered(System.out::println);
     }
 
 
