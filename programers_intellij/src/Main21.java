@@ -28,6 +28,9 @@ public class Main21 {
         ageOfFriends2.forEach((friend, age) -> System.out.println(friend+" is "+age+" years old"));
 
         ageOfFriends2.entrySet().stream().sorted(Map.Entry.comparingByKey()).forEachOrdered(System.out::println);
+
+        System.out.println(ageOfFriends2.getOrDefault("jongmin",1));        // jongmin이 없으면 1을 반환
+//        System.out.println(ageOfFriends2.getOrDefault("jongmin","matrix"));
     }
 
 
