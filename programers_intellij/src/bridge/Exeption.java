@@ -47,17 +47,30 @@ public class Exeption {
                 return true;
             }
         }catch (IllegalArgumentException e) {
+            System.out.println(e.getClass()+" [ERROR] : 문자를 잘못 입력하셨습니다");
             return false;
         }
         return false;
     }
+    /**
+     * R 과 Q가 아니면 예외 처리
+     * @param : (재시도: R, 종료: Q)
+     * @return : 예외처리 true or exeption
+     * @exception IllegalArgumentException
+     */
     public boolean isRorQ(String input) throws IllegalArgumentException{
         if(input.equals("R") || input.equals("Q")){
             return true;
         }
-        System.out.println("[ERROR] : 문자를 잘못 입력하셨습니다.");
+
         throw new IllegalArgumentException();
     }
+    /**
+     * U 과 D가 아니면 예외 처리
+     * @param : (위: U, 아래: D)
+     * @return : 예외처리 true or exeption
+     * @exception IllegalArgumentException
+     */
     public boolean isUorD(String input) throws IllegalArgumentException{
         if(input.equals("U") || input.equals("D")){
             return true;
@@ -65,9 +78,13 @@ public class Exeption {
         System.out.println("[ERROR] : 문자를 잘못 입력하셨습니다.");
         throw new IllegalArgumentException();
     }
-
-    //숫자가 아닐 때
-    private boolean isDigit(String number) throws IllegalArgumentException{
+    /**
+     * 숫자가 아닐 때
+     * @param number : 다리길이
+     * @return : 예외처리 true or exeption
+     * @exception IllegalArgumentException
+     */
+    public boolean isDigit(String number) throws IllegalArgumentException{
         try{
             Integer.parseInt(number);
         }catch (IllegalArgumentException e) {
@@ -75,8 +92,13 @@ public class Exeption {
         }
         return true;
     }
-    // 3과 20 사이가 아닐 때
-    private boolean isRightRange(String number) throws IllegalArgumentException{
+    /**
+     * 3과 20 사이가 아닐 때
+     * @param number : 다리길이
+     * @return : 예외처리 true or exeption
+     * @exception IllegalArgumentException
+     */
+    public boolean isRightRange(String number) throws IllegalArgumentException{
         int numCheck = Integer.parseInt(number);
         if(!(numCheck >= 3 && numCheck <=20)) {
             System.out.println("[ERROR] : 올바른 숫자 범위를 입력해주세요");

@@ -18,34 +18,40 @@ public class BridgeGame {
     }
     /**
      * 사용자가 칸을 이동할 때 사용하는 메서드
-     * <p>
-     * 이동을 위해 필요한 메서드의 반환 타입(return type), 인자(parameter)는 자유롭게 추가하거나 변경할 수 있다.
+     * @param crossTheBridge : U or D
+     * @return O (true) , X (false)
      */
     public boolean move(String crossTheBridge) {
         if(bridge.get(count).equals(crossTheBridge)){
-            // 건너기 성공
-            gameState.add(bridge.get(count));
-            count++;
-            if(bridge.size() == count) {
-                // 게임 승리 (종료)
-                isSuccess = true;
-                return false;
+            if(endOfInput()) {
+                return true;
             }
-            // 게임 계속 진행
-            isSuccess = true;
-            return true;
-
+            return false;
         }
+        return crossFail(crossTheBridge);
+    }
+    // 건너기 실패 (종료)
+    public boolean crossFail(String crossTheBridge){
         gameState.add(crossTheBridge);
-        // 건너기 실패 (종료)
         isSuccess = false;
         return false;
+    }
+    // 사용자의 최대 입력 ( 다리의 총 개수) 만큼 입력하였을 때
+    public boolean endOfInput(){
+        gameState.add(bridge.get(count));
+        count++;
+        isSuccess = true;
+        if(bridge.size() == count) {
+            // 게임 승리 (종료)
+            return false;
+        }
+        // 게임 계속 진행
+        return true;
     }
 
     /**
      * 사용자가 게임을 다시 시도할 때 사용하는 메서드
-     * <p>
-     * 재시작을 위해 필요한 메서드의 반환 타입(return type), 인자(parameter)는 자유롭게 추가하거나 변경할 수 있다.
+     *
      */
     public boolean retry(String whetherRetryGame) {
         if(whetherRetryGame.equals("R")){
@@ -61,10 +67,7 @@ public class BridgeGame {
     public List<String> getGameState() {
         return gameState;
     }
-    // 다리 개수를 반환 해주는 메서드
-    public int getBridgeSize(){
-        return bridge.size();
-    }
+    // 성공 여부를 반환하는 getter
     public boolean getIsSuccess(){
         return isSuccess;
     }
