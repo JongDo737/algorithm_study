@@ -1,5 +1,7 @@
-package bridge;
+package bridge.test;
 
+import bridge.Application;
+import bridge.Exeption;
 import camp.nextstep.edu.missionutils.test.NsTest;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
@@ -130,7 +132,6 @@ public class BridgeTest extends NsTest {
             assertThat(upSideIndex).isEqualTo(downSideIndex);
         }, 1, 0, 1);
     }
-
 
     @Override
     protected void runMain() {

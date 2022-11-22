@@ -22,7 +22,6 @@ public class BridgeMaker {
     public List<String> makeBridge(int size) {
         List<String> bridge = makeBridgeIntegerList(size);
 
-        System.out.println(bridge);
         return bridge;
     }
     /**
