@@ -42,7 +42,6 @@ public class Application {
         winningNumbers = Exeption.stringToList(input);
         // 로또 번호 반환
         return winningNumbers;
-
     }
 
     // 로또 번호 임의로 생성
@@ -67,8 +66,6 @@ public class Application {
         count = moneyCheck / 1000;
         System.out.println(count + "개를 구매했습니다.");
         return count;
-
-
     }
 
 
