@@ -67,6 +67,4 @@ public class Application {
         System.out.println(count + "개를 구매했습니다.");
         return count;
     }
-
-
 }
